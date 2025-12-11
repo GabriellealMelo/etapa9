@@ -1,0 +1,106 @@
+{
+  "info": {
+    "name": "Cadastro Clientes - Etapa9",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar clientes",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/clientes",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "clientes"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Criar cliente",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Maria Silva\", \"cpf\": \"11122233344\", \"email\": \"maria@example.com\", \"telefone\": \"2199999-0000\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/clientes",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "clientes"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar por id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/clientes/1",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "clientes",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Atualizar cliente",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Maria S\", \"cpf\": \"11122233344\", \"email\": \"maria.s@example.com\", \"telefone\": \"2190000-1111\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/clientes/1",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "clientes",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Deletar cliente",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/clientes/1",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "clientes",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
